@@ -1,6 +1,6 @@
 package com.example.salonapp.domain.entity.merchant
 
-data class MakeupMerchant(
+data class MakeupMerchantDetail(
     val avatar: String,
     val description: String,
     val id: String,
@@ -11,6 +11,8 @@ data class MakeupMerchant(
     val userImage: String
 ) {
     data class Service(
-        val name: String
+        val caption: String,
+        val name: String,
+        val price: String
     )
 }

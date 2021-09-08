@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SalonApp">
-        <activity android:name=".presentation.merchant.MakeupMerchantActivity">
+        <activity android:name=".presentation.merchant.detail.MakeupMerchantDetailActivity" />
+        <activity android:name=".presentation.merchant.list.MakeupMerchantActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

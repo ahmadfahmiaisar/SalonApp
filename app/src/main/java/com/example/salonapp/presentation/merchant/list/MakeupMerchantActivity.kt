@@ -1,4 +1,4 @@
-package com.example.salonapp.presentation.merchant
+package com.example.salonapp.presentation.merchant.list
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,11 +6,11 @@ import android.widget.ArrayAdapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.base.abstraction.BaseActivity
 import com.example.base.extension.gone
-import com.example.base.extension.showToast
 import com.example.base.extension.visible
 import com.example.base.state.ViewState
 import com.example.salonapp.databinding.ActivityMakeupMerchantBinding
 import com.example.salonapp.domain.entity.merchant.MakeupMerchant
+import com.example.salonapp.presentation.merchant.detail.MakeupMerchantDetailActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -57,7 +57,7 @@ class MakeupMerchantActivity :
         }
 
         adapter.setOnMakeupMerchantSelected {
-            showToast { it.name }
+            MakeupMerchantDetailActivity.start(this, it.id)
         }
     }
 
@@ -72,7 +72,7 @@ class MakeupMerchantActivity :
             val merchantSelected = adapterView.getItemAtPosition(position)
             data.forEach {
                 if (it.name == merchantSelected) {
-                    showToast { "ini ${it.name}" }
+                    MakeupMerchantDetailActivity.start(this, it.id)
                 }
             }
         }

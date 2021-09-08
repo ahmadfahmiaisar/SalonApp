@@ -1,4 +1,4 @@
-package com.example.salonapp.data.response
+package com.example.salonapp.data.response.merchant
 
 import com.squareup.moshi.Json
 
@@ -21,11 +21,7 @@ data class MakeupMerchantDto(
     val userImage: String?
 ) {
     data class Service(
-        @field:Json(name = "caption")
-        val caption: String?,
         @field:Json(name = "name")
-        val name: String?,
-        @field:Json(name = "price")
-        val price: String?
+        val name: String?
     )
 }

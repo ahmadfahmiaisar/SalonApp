@@ -1,4 +1,4 @@
-package com.example.salonapp.presentation.merchant
+package com.example.salonapp.presentation.merchant.list
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
