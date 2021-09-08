@@ -1,4 +1,4 @@
-package com.example.base.exception
+package com.example.apiclient.exception
 
 data class ClientErrorException(val code: Int) : Exception()
 

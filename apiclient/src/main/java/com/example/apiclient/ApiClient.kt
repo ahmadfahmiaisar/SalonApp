@@ -1,6 +1,6 @@
-package com.example.base.apiclient
+package com.example.apiclient
 
-import com.example.base.state.ApiResponse
+import com.example.apiclient.state.ApiResponse
 import retrofit2.Response
 
 interface ApiClient {

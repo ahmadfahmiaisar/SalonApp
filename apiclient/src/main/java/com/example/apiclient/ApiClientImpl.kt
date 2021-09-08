@@ -1,12 +1,12 @@
-package com.example.base.apiclient
+package com.example.apiclient
 
-import com.example.base.exception.ClientErrorException
-import com.example.base.exception.EmptyResponseException
-import com.example.base.exception.NoInternetConnection
-import com.example.base.exception.ServerErrorException
-import com.example.base.exception.TimeoutException
-import com.example.base.exception.UnknownNetworkErrorException
-import com.example.base.state.ApiResponse
+import com.example.apiclient.exception.ClientErrorException
+import com.example.apiclient.exception.EmptyResponseException
+import com.example.apiclient.exception.NoInternetConnection
+import com.example.apiclient.exception.ServerErrorException
+import com.example.apiclient.exception.TimeoutException
+import com.example.apiclient.exception.UnknownNetworkErrorException
+import com.example.apiclient.state.ApiResponse
 import java.io.IOException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException

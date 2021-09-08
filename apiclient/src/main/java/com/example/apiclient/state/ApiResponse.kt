@@ -1,4 +1,4 @@
-package com.example.base.state
+package com.example.apiclient.state
 
 sealed class ApiResponse<A, B> {
     class Success<A, B>(val data: B) : ApiResponse<A, B>()

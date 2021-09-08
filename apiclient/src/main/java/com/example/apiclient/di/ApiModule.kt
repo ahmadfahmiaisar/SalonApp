@@ -1,7 +1,7 @@
-package com.example.base.di
+package com.example.apiclient.di
 
-import com.example.base.apiclient.ApiClient
-import com.example.base.apiclient.ApiClientImpl
+import com.example.apiclient.ApiClient
+import com.example.apiclient.ApiClientImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
