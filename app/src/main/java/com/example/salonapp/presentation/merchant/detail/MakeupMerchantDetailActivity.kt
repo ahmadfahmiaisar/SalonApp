@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.base.abstraction.BaseActivity
 import com.example.base.extension.loadUrl
 import com.example.base.state.ViewState
@@ -29,6 +30,7 @@ class MakeupMerchantDetailActivity :
         }
     }
 
+    private val makeupServiceAdapter by lazy { MakeupServiceAdapter(emptyList()) }
     private var idMerchant: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +39,7 @@ class MakeupMerchantDetailActivity :
         observeMakeupMerchantDetail()
         handleIntentArguments()
         vm.getMakeupMerchantDetail(idMerchant)
+        initRecycleViewMakeupService()
     }
 
     private fun handleIntentArguments() {
@@ -52,11 +55,18 @@ class MakeupMerchantDetailActivity :
                 }
                 is ViewState.Success -> {
                     binding.ivUserImage.loadUrl(it.data.avatar)
+                    makeupServiceAdapter.refreshData(it.data.services)
                 }
                 is ViewState.Error -> {
 
                 }
             }
         })
+    }
+
+    private fun initRecycleViewMakeupService() {
+        val layoutManager = LinearLayoutManager(this)
+        binding.rvMakeupService.layoutManager = layoutManager
+        binding.rvMakeupService.adapter = makeupServiceAdapter
     }
 }
